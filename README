@@ -1,0 +1,27 @@
+This runs in a tomee
+
+http://localhost:38080/resources/test/show_json
+http://localhost:38080/resources/test/both
+
+Application context is /
+
+➜  ~ http --follow --timeout 3600 GET localhost:38080/resources/test/both Accept:'application/xml'
+HTTP/1.1 200
+Content-Length: 62
+Content-Type: application/xml
+Date: Thu, 16 Jan 2020 14:41:01 GMT
+Server: Apache TomEE
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><demo/>
+
+➜  ~ http --follow --timeout 3600 GET localhost:38080/resources/test/both Accept:'application/json'
+HTTP/1.1 200
+Content-Type: application/json
+Date: Thu, 16 Jan 2020 14:41:07 GMT
+Server: Apache TomEE
+Transfer-Encoding: chunked
+
+{
+    "hello": "Hello"
+}
+
