@@ -1,4 +1,6 @@
-This runs in a tomee
+initial creation: mvn archetype:generate -Dfilter=com.airhacks:javaee7-essentials-archetype
+
+This runs in a tomee on port 38080
 
 http://localhost:38080/resources/test/show_json
 http://localhost:38080/resources/test/both
